@@ -1,0 +1,72 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Socials from "../components/Socials.astro";
+import Projects from "../components/Projects.astro";
+import Skills from "../components/Skills.astro";
+---
+
+<Layout title="Hi, I'm  Ashen Witch">
+  <main>
+    <h1>Hello, I'm <span class="text-gradient">Ashen Witch</span></h1>
+    <p class="instructions">
+      <strong>Programming</strong> Enthusiast /
+      <code>High School</code>student<br />
+      🌸Don't wait for someone to bring you flowers. Plant your <strong>own garden</strong> and decorate your <strong>own soul</strong>.
+    </p>
+    <Socials />
+    <img
+      w-full
+      src="https://cdn.jsdelivr.net/npm/ashenwitch/github.svg"
+    />
+    <Projects />
+    <Skills />
+    <footer mt-12>
+      <p text-sm op-40>Ashen Witch © 2024</p>
+    </footer>
+    <style is:inline>
+      .floatingchat-container-wrap,
+      .floating-chat-kofi-popup-iframe {
+        right: 16px;
+        left: unset;
+      }
+    </style>
+  </main>
+</Layout>
+
+<style>
+  main {
+    margin: auto;
+    padding: 1.5rem;
+    max-width: 94ch;
+  }
+  h1 {
+    font-size: 3rem;
+    font-weight: 800;
+    margin: 0;
+  }
+  .text-gradient {
+    background-image: var(--accent-gradient);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-size: 400%;
+    background-position: 0%;
+  }
+  .instructions {
+    line-height: 1.6;
+    margin: 1rem 0;
+    /* border: 1px solid rgba(var(--accent), 50%); */
+    /* padding: 1rem; */
+    border-radius: 0.6rem;
+  }
+  .instructions code {
+    font-size: 0.875em;
+    font-weight: bold;
+    background: rgba(var(--accent), 22%);
+    color: rgb(var(--accent));
+    border-radius: 4px;
+    padding: 0.3em 0.45em;
+  }
+  .instructions strong {
+    color: rgb(var(--accent));
+  }
+</style>
